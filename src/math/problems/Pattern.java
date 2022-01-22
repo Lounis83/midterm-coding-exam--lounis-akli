@@ -1,4 +1,7 @@
-package math.problems;
+
+package mathproblems;
+
+import java.util.Scanner;
 
 public class Pattern {
 
@@ -8,8 +11,26 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
-
-
+		Pattern.pattern();
 	}
+	// Use the For loop to iterate from the maximum value
+	public static int pattern(){
+		int i;
+		String str = "";
+		for(i = 100; i >= 0; i--) {
+			if(i >= 90 && i <= 100){
+				i = i ;
+			}else if(i <= 90 && i >= 70){
+				i --;
+			}else if(i <= 70 && i >= 40){
+				i -= 2;
+			}else{
+				i -= 3;
+			}
+			System.out.print(str+ i );
+			str = ",";
+		}
+		return i;
+	}
+
 }

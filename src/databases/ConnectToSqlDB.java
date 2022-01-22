@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.sql.*;
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
@@ -34,6 +35,12 @@ public class ConnectToSqlDB {
         connect = DriverManager.getConnection(url,userName,password);
         System.out.println("Database is connected");
         return connect;
+    }
+
+    public static void insertDataFromArrayListToSqlTable(ArrayList<String> fruitsName, String fruits, String fruit_name) {
+    }
+
+    public static void insertDataFromHashMapToSqlTable(HashMap<String, List<String>> map, String country, String soccerTeams) {
     }
 
     public List<String> readDataBase(String tableName, String columnName)throws Exception{

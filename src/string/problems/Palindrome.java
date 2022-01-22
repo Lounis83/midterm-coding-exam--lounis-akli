@@ -1,4 +1,4 @@
-package string.problems;
+package stringproblems;
 
 public class Palindrome {
     public static void main(String[] args) {
@@ -7,5 +7,29 @@ public class Palindrome {
           Palindrome. So write java code to check if a given String is Palindrome or not.
          */
 
+        System.out.println(Palindrome.checkPalindrome("MADAM"));
+
     }
+
+    // Function to check if a word is palindrome
+
+    /**
+     * This method checks if the String you enter is palindrome
+     * @param word
+     * @return
+     */
+    public static boolean checkPalindrome(String word) {
+        boolean result = false;
+        int n = word.length();
+        word = word.toLowerCase();
+        for (int i = 0; i < n; i++, n--) {
+            if (word.charAt(i) != word.charAt(n - 1)) {
+                result = false;
+            } else {
+                result = true;
+            }
+        }
+        return result;
+    }
+
 }
